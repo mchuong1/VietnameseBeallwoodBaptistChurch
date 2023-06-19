@@ -14,7 +14,7 @@ module.exports = {
     ecmaFeatures: { jsx: true },
   },
   settings: { react: { version: '18.2' } },
-  plugins: ['react-refresh'],
+  plugins: ['react-refresh', 'prettier'],
   rules: {
     'react-refresh/only-export-components': 'warn',
     "no-unused-vars": "error",
