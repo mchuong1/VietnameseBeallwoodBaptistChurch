@@ -1,7 +1,21 @@
+import { placeholder } from "@cloudinary/react";
+import { churchLandingVideo } from "../../assets/photos";
+import styles from './Landing.module.scss';
+import { CLDVideo } from "../../components/cldvideo/CLDVideo";
+
 function Landing () {
   return (
-    <div>
-      <h1>Landing</h1>
+    <div id="landingpage">
+      <div className={styles.videoContainer}>
+        <CLDVideo
+          cldVid={churchLandingVideo}
+          muted
+          autoPlay
+          preload
+          loop
+          plugins={[placeholder({ mode: 'blur' })]}
+        />
+      </div>
     </div>
   )
 }
