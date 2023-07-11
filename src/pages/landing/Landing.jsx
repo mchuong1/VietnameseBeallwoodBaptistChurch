@@ -10,7 +10,7 @@ function Landing () {
         <CLDVideo
           cldVid={churchLandingVideo}
           muted
-          autoPlay
+          // autoPlay
           preload
           loop
           plugins={[placeholder({ mode: 'blur' })]}

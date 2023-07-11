@@ -3,6 +3,7 @@ import {
   IconButton,
   Menu,
 } from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu';
 import { useNavigate } from "react-router-dom";
 // eslint-disable-next-line import/no-unresolved
 import styles from './NavBar.module.scss';
@@ -16,19 +17,28 @@ function NavBar() {
     navigate(path);
   }
 
+  const handleClick = () => {
+    console.log('works');
+  }
+
   return (
     <AppBar classes={{ root: styles.appBar }} position='sticky'>
       <Toolbar>
-        <div>Vietnamese Beallwood Baptist Church</div>
         {
           isDesktop
           ? (
             <div>
+              <div>Vietnamese Beallwood Baptist Church</div>
               <span onClick={() => handleNavigate('/')} aria-hidden='true'>Home</span>
             </div>
           ) : (
-            <IconButton>
-              <Menu style={{ color: 'black' }}/>
+            <IconButton
+              edge='start'
+              color='inherit'
+              aria-label='menu'
+              onClick={handleClick}
+            >
+              <MenuIcon style={{ color: 'white' }}/>
             </IconButton>
           )
         }
